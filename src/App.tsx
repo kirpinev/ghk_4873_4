@@ -93,13 +93,13 @@ export const App = () => {
             sliderValue={amount}
             onInputChange={handleSumInputChange}
             onSliderChange={handleSumSliderChange}
-            onBlur={() => setAmount((prev) => clamp(prev, 1, 30_000))}
-            min={1}
+            onBlur={() => setAmount((prev) => clamp(prev, 100, 30_000))}
+            min={100}
             max={30_000}
-            range={{ min: 1, max: 30_000 }}
+            range={{ min: 100, max: 30_000 }}
             pips={{
               mode: "values",
-              values: [1, 30_000],
+              values: [100, 30_000],
               format: { to: formatPipsValue },
             }}
             step={1}
